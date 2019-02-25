@@ -4,16 +4,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.gallery-background{
-  background: #ffffff url('../images/background.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.main-background{
-  background: #ffffff url('../images/background2.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
 p{
   box-sizing: border-box;
   border: 5px;
@@ -103,6 +93,7 @@ nav a {
   font-weight: bold;
   background-color: #000000;
   text-decoration: underline #ffffff;
+  min-height: 2.5vh;
 }
 
 /* used / slightly altered code from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ for skip to main content lines 35-59*/
@@ -138,20 +129,17 @@ a.skip-main:active {
     right: -200px;
 }
 
-header, footer {
+footer {
   background-color: #666666;
   color: #ffffff;
   display: block;
   min-height: 4.5vh;
-  /* border: 5px;
-  padding: 5px;
-  margin: 5px; */
+  margin: 0;
   text-align: center;
-  border: 5px;
   padding: 14px 16px;
-  width: auto;
   position: relative;
   text-align: center;
+  margin-bottom: -20px;
 }
 
 /* used https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/ for coding for my gallery page */
@@ -244,6 +232,18 @@ header, footer {
     float: center;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .gallery-background{
+    background: #ffffff url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .main-background{
+    background: #ffffff url('../images/background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
 
 /* @media screen and (min-width: 400px)
 @media screen and (min-width: 600px)

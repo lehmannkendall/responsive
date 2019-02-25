@@ -1,0 +1,268 @@
+body{
+    /* background-color:#e3eefd; */
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-background{
+  background: #ffffff url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-background{
+  background: #ffffff url('../images/background2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+p{
+  box-sizing: border-box;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+
+img{
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  box-sizing: border-box;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8em;
+  box-sizing: border-box;
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+
+li{
+	text-decoration: none;
+	display:inline;
+	background-color: #ffffff;
+	color: #000000;
+  float: left;
+}
+
+/* refered to https://www.w3schools.com/css/css_navbar.asp for help with navigation - ul, li a, li a:hover */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666666;
+}
+
+li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #000000;
+}
+
+a{
+  font-family: 'Raleway', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  alignment: center;
+  background-color: #666666;
+  display: inline-block;
+  padding: 15px;
+  min-height: 2vh;
+}
+
+.current {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #000000;
+  text-decoration: underline #ffffff;
+}
+
+/* used / slightly altered code from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ for skip to main content lines 35-59*/
+
+.skip-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* z-index: -999; */
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+  color: #ffffff;
+  background-color: #000000;
+  left: auto;
+  top: auto;
+  width: 20%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px #ffffff;
+  text-align: center;
+  font-size: 1.2em;
+  /* z-index: 999; */
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+    right: -200px;
+}
+
+header, footer {
+  background-color: #666666;
+  color: #ffffff;
+  display: block;
+  min-height: 4.5vh;
+  /* border: 5px;
+  padding: 5px;
+  margin: 5px; */
+  text-align: center;
+  border: 5px;
+  padding: 14px 16px;
+  width: auto;
+  position: relative;
+  text-align: center;
+}
+
+/* used https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/ for coding for my gallery page */
+/* used grid here for the gallery page */
+
+.gallery {
+  /* margin: auto; */
+  /* max-width: 1200px; */
+  box-sizing: border-box;
+  border: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: auto;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
+.gallery-item img{
+  display: inline-block;
+  position: relative;
+  /* margin: 1rem; */
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.gallery-item img:hover{
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 600px) {
+  .gallery-item {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery-item {
+    width: calc(33.333% - 2rem);
+  }
+}
+
+/* help for pages responsive design from https://learn.shayhowe.com/advanced-html-css/responsive-web-design/ mobile first demo */
+
+.pages:before,
+.pages:after {
+  content: "";
+  display: table;
+}
+
+.pages:after {
+  clear: both;
+}
+
+.pages {
+  *zoom: 1;
+}
+
+.pages-item {
+  margin: 1.3%;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.pages-image {
+  max-width: 60%;
+}
+
+.pages-item img {
+  display: inline-block;
+  position: relative;
+  margin: 1rem;
+  width: 80%;
+}
+
+@media all and (min-width: 420px) {
+  .pages {
+    max-wdith: 538px;
+  }
+  .pages-item {
+    float: center;
+  }
+}
+
+@media all and (min-width: 420px) {
+  .nav {
+    max-width: 200px;
+  }
+
+  .nav a {
+    background-color: #666666;
+    color: #ffffff;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+
+  .nav-item {
+    float: center;
+  }
+}
+/* @media screen and (min-width: 400px)
+@media screen and (min-width: 600px)
+@media screen and (min-width: 1000px)
+@media screen and (min-width: 1400px) */

@@ -245,23 +245,6 @@ header, footer {
   }
 }
 
-@media all and (min-width: 420px) {
-  .nav {
-    max-width: 200px;
-  }
-
-  .nav a {
-    background-color: #666666;
-    color: #ffffff;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-  }
-
-  .nav-item {
-    float: center;
-  }
-}
 /* @media screen and (min-width: 400px)
 @media screen and (min-width: 600px)
 @media screen and (min-width: 1000px)

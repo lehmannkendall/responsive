@@ -54,6 +54,14 @@ li{
 
 /* refered to https://www.w3schools.com/css/css_navbar.asp for help with navigation - ul, li a, li a:hover */
 
+li a:hover {
+  background-color: #000000;
+}
+
+a{
+  font-family: 'Raleway', sans-serif;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -70,21 +78,23 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #000000;
-}
-
-a{
-  font-family: 'Raleway', sans-serif;
-}
-
-nav a {
+nav li {
   text-decoration: none;
   alignment: center;
   background-color: #666666;
-  display: inline-block;
-  padding: 15px;
-  min-height: 2vh;
+  display: block;
+  /* padding: 15px;
+  min-height: 2vh; */
+  /* width: 10vh; */
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  width: 100%
 }
 
 .current {
@@ -93,7 +103,15 @@ nav a {
   font-weight: bold;
   background-color: #000000;
   text-decoration: underline #ffffff;
-  min-height: 2.5vh;
+}
+
+@media screen and (min-width: 700px) {
+  .current {
+    min-height: 2.5vh;
+  }
+  nav ul li {
+    width: 10%;
+  }
 }
 
 /* used / slightly altered code from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ for skip to main content lines 35-59*/
@@ -249,9 +267,3 @@ footer {
     background-size: cover;
   }
 }
-
-
-/* @media screen and (min-width: 400px)
-@media screen and (min-width: 600px)
-@media screen and (min-width: 1000px)
-@media screen and (min-width: 1400px) */

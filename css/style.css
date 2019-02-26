@@ -220,16 +220,22 @@ footer {
 .pages-item img {
   display: inline-block;
   position: relative;
-  margin: 1rem;
-  width: 80%;
+  /* margin: 1rem;
+  width: 80%; */
 }
 
 @media all and (min-width: 420px) {
-  .pages {
-    max-wdith: 538px;
-  }
   .pages-item {
     float: center;
+  }
+  .pages-item img{
+    max-width: 100%;
+}
+
+@media and (min-width: 700px) {
+  .pages-item img {
+    width: 80%;
+    margin: 1rem;
   }
 }
 

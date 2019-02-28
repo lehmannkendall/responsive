@@ -113,7 +113,6 @@ nav ul li {
   }
   nav ul li {
     width: 20%;
-    /* 10% */
   }
 }
 
@@ -229,6 +228,12 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .gallery-item img:hover {
     -webkit-animation-name: none;
+  }
+}
+
+@media (prefers-reduced-transparency :reduce) {
+  .gallery-item img:hover {
+    opacity: 1;
   }
 }
 

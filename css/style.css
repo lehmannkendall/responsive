@@ -203,9 +203,9 @@ footer {
 .gallery-item img:hover{
   opacity: 0.4;
   -webkit-animation-name: bounce;
-  -webkit-animation-iteration: infinite;
   -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 @keyframes bounce {
